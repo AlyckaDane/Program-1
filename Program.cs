@@ -1,35 +1,31 @@
 ﻿using System;
 
-class Program
+namespace prog_2
 {
-    static void Main(string[] args)
+    internal class Program
     {
-        string username, password;
-        int attempts = 3;
-
-        while (attempts > 0)
+        static void Main(string[] args)
         {
-            Console.Write("Enter username: ");
-            username = Console.ReadLine();
-
-            Console.Write("Enter password: ");
-            password = Console.ReadLine();
-
-            if (username == "Admin" && password == "Admin1234!")
+            for (int i = 1; i <= 100; i++)
             {
-                Console.WriteLine("Login successful");
-                return;
-            }
-            else
-            {
-                Console.WriteLine("Incorrect credentials. Please try again.");
-                attempts--;
-            }
-        }
+                if (i % 3 == 0 && i % 5 == 0)
+                {
+                    Console.WriteLine("Hello Goodbye");
+                }
+                else if (i % 3 == 0)
+                {
+                    Console.WriteLine("Hello");
+                }
+                else if (i % 5 == 0)
+                {
+                    Console.WriteLine("Goodbye");
 
-        if (attempts == 0)
-        {
-            Console.WriteLine("Too many failed attempts. Please try again later.");
+                }
+                else
+                {
+                    Console.WriteLine(i);
+                }
+            }
         }
     }
 }
