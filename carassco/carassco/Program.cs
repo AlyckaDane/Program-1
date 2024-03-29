@@ -22,7 +22,7 @@ class Program
             }
             else
             {
-                Console.WriteLine("Incorrect credentials. Please try again.");
+                Console.WriteLine("Credentials are incorrect. Please try again.");
                 attempts--;
             }
         }
